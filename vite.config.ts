@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/software/',
+    base: '/aadisoftware/',
 
     plugins: [react(), tailwindcss()],
 
