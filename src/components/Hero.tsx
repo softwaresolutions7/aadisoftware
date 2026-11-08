@@ -16,10 +16,15 @@ import {
 
 import { CompanySettings } from '../types';
 
-import restaurantImage from '../../assets/images/pos_restaurant_mockup_179379101826.jpg';
-import retailImage from '../../assets/images/retail_pos_mockup_179379088491.jpg';
-import erpImage from '../../assets/images/erp_business_dashboard_17937908994.jpg';
-import accountingImage from '../../assets/images/hero_software_suite_179379102769.jpg';
+
+const restaurantImage = `${import.meta.env.BASE_URL}assets/images/pos_restaurant_mockup_179379101826.jpg`;
+
+const retailImage = `${import.meta.env.BASE_URL}assets/images/retail_pos_mockup_179379088491.jpg`;
+
+const erpImage = `${import.meta.env.BASE_URL}assets/images/erp_business_dashboard_17937908994.jpg`;
+
+const accountingImage = `${import.meta.env.BASE_URL}assets/images/hero_software_suite_179379102769.jpg`;
+
 
 interface HeroProps {
   settings: CompanySettings;
