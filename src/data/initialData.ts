@@ -1,0 +1,387 @@
+import { CompanySettings, PricingPackage, SoftwareProduct } from '../types';
+
+export const initialCompanySettings: CompanySettings = {
+  companyName: 'AADI Software Solutions',
+  tagline: 'Smart Business. Better Tomorrow.',
+  secondarySlogan: 'Innovate • Automate • Excel',
+  phoneNumber: '+92 300 1234567',
+  phoneDialer: 'tel:+923001234567',
+  whatsappNumber: '923001234567',
+  email: 'info@aadisoftware.com',
+  officeAddress: 'Office #102, Executive Business Hub, Technology Park',
+  businessHours: 'Monday – Saturday: 9:00 AM – 7:00 PM',
+  supportHours: 'Monday – Saturday: 9:00 AM – 8:00 PM',
+};
+
+export const initialProducts: SoftwareProduct[] = [
+  {
+    id: 'prod-restaurant-pos',
+    name: 'Restaurant POS Software',
+    slug: 'restaurant-pos-software',
+    category: 'Hospitality & Dining',
+    iconName: 'UtensilsCrossed',
+    image: '/src/assets/images/pos_restaurant_mockup_1793979101826.jpg',
+    shortDescription: 'High-speed touch billing, interactive table layouts, kitchen display orders, and seamless thermal receipt printing.',
+    fullDescription: 'AADI Restaurant POS is engineered specifically for cafes, fine dining, quick-service eateries, and multi-branch food chains. It streamlines table turns, connects front-of-house waitstaff directly to the kitchen, and gives managers real-time visibility over inventory, recipe consumption, and daily net revenue.',
+    isPublished: true,
+    order: 1,
+    features: [
+      'Restaurant billing & multi-payment checkout',
+      'Dine-in interactive table floor management',
+      'Kitchen Order Management (KOT) & live status',
+      'Takeaway, phone dispatch & delivery management',
+      'Customer profile & loyalty management',
+      'Recipe-level ingredient inventory tracking',
+      'Comprehensive daily sales and cashier shift reports',
+      'ESC/POS Thermal printer support with auto-cutter',
+      'Granular cashier, supervisor & administrator roles'
+    ],
+    benefits: [
+      'Reduces order preparation mistakes with instant digital kitchen printing',
+      'Accelerates peak dining hour checkout times to under 15 seconds',
+      'Stops food wastage with ingredient-level depletion alerts',
+      'Works offline with instant local database synchronization'
+    ],
+    systemRequirements: {
+      os: 'Windows 10 / 11, Android 9.0+, or Modern Web Browser',
+      processor: 'Intel Core i3 / AMD Ryzen 3 or higher',
+      ram: '4 GB RAM minimum (8 GB recommended for heavy loads)',
+      storage: '2 GB free SSD space',
+      extras: 'Supports standard 80mm / 58mm thermal printers, cash drawers, and barcode scanners'
+    },
+    faqs: [
+      {
+        question: 'Can this software run if our internet connection drops?',
+        answer: 'Yes. AADI Restaurant POS features full offline resilience. Cashiers can continue placing table orders, printing KOTs, and generating guest receipts uninterrupted.'
+      },
+      {
+        question: 'Does it support multiple kitchen stations and bar printers?',
+        answer: 'Yes. You can route appetizer and drink items to specific printers or KOT displays automatically based on product categories.'
+      },
+      {
+        question: 'Can we install it on Android touch tablets for waitstaff?',
+        answer: 'Yes, waitstaff can take orders tableside using Android tablets or wireless handheld POS terminals.'
+      }
+    ],
+    pricingNote: 'Custom quote based on restaurant size, stations, and printer hardware.',
+    whatsappPrefill: 'Assalam o Alaikum, I am interested in AADI Restaurant POS Software. Please share demo details and pricing.'
+  },
+  {
+    id: 'prod-retail-pos',
+    name: 'Retail POS Software',
+    slug: 'retail-pos-software',
+    category: 'Retail & Supermarkets',
+    iconName: 'ShoppingBag',
+    image: '/src/assets/images/retail_pos_mockup_1793979088491.jpg',
+    shortDescription: 'Lightning-fast barcode checkout, real-time stock deductions, customer loyalty points, and thermal receipt generation.',
+    fullDescription: 'Built for boutiques, grocery supermarkets, apparel outlets, and general retail stores. Designed for high volume checkouts, smooth barcode scanning, automated price checks, supplier replenishment tracking, and daily cash drawer reconciliation.',
+    isPublished: true,
+    order: 2,
+    features: [
+      'Fast barcode billing & keyboard shortcuts',
+      'Multi-barcode scanning & weighing scale integration',
+      'Product SKU, variant (size/color) & batch management',
+      'Real-time automated stock management & reorder alerts',
+      'Customer purchase histories & credit accounts',
+      'Promotions, percentage discounts & coupon codes',
+      'Item returns, exchange processing & credit notes',
+      'End-of-day Z-report cash drawer reconciliation'
+    ],
+    benefits: [
+      'Eliminates long cashier queues with sub-second barcode lookups',
+      'Prevents under-stocking with automated minimum-level alerts',
+      'Prevents cash drawer discrepancies with shift-closing balances',
+      'Handles thousands of SKUs smoothly without lag'
+    ],
+    systemRequirements: {
+      os: 'Windows 10 / 11 (64-bit) or Web-based terminal',
+      processor: 'Dual Core 2.0 GHz or higher',
+      ram: '4 GB RAM',
+      storage: '1.5 GB SSD storage',
+      extras: 'Compatible with 1D/2D Barcode Scanners, Electronic Cash Drawers, Thermal Bill Printers'
+    },
+    faqs: [
+      {
+        question: 'Can we generate and print our own custom barcode labels?',
+        answer: 'Yes. The system includes an integrated barcode label designer for all standard sticker roll sizes.'
+      },
+      {
+        question: 'Does it support customer ledger accounts for credit sales?',
+        answer: 'Yes, customer balances, payments on account, and aging reports are fully supported.'
+      }
+    ],
+    pricingNote: 'Transparent pricing with one-time or subscription options tailored to terminal count.',
+    whatsappPrefill: 'Assalam o Alaikum, I am interested in AADI Retail POS Software. Please provide pricing and feature list.'
+  },
+  {
+    id: 'prod-erp-software',
+    name: 'Enterprise ERP System',
+    slug: 'erp-software',
+    category: 'Enterprise & Multi-Branch',
+    iconName: 'Layers',
+    image: '/src/assets/images/erp_business_dashboard_1793979088994.jpg',
+    shortDescription: 'Comprehensive business management uniting sales pipelines, procurement, inventory, double-entry accounts, and staff.',
+    fullDescription: 'A complete modular Enterprise Resource Planning solution for manufacturing companies, wholesale distributors, and multi-branch commercial enterprises. Unify your entire organization under one centralized system with real-time operational analytics.',
+    isPublished: true,
+    order: 3,
+    features: [
+      'Sales management (inquiries, quotations, sales orders, delivery notes)',
+      'Purchase management (PO creation, vendor bills, goods received notes)',
+      'Multi-location inventory tracking with batch & lot numbers',
+      'Comprehensive double-entry general ledger & chart of accounts',
+      'Customer relationship management (CRM) & payment terms',
+      'Supplier management, vendor evaluation & payment schedules',
+      'Executive business reports & KPI performance dashboards',
+      'Employee records, attendance integration & payroll calculation'
+    ],
+    benefits: [
+      'Replaces scattered spreadsheets with a single authoritative source of truth',
+      'Gives executives instant clarity over cash flow, liabilities, and profitability',
+      'Reduces procurement cycle time and prevents duplicate purchase orders',
+      'Scales seamlessly across regional branches and warehouses'
+    ],
+    systemRequirements: {
+      os: 'Cloud Hosted (Accessible via any Modern Browser) or On-Premise Windows Server',
+      processor: 'Quad Core 2.5 GHz+ (for local server)',
+      ram: '8 GB RAM minimum',
+      storage: '10 GB SSD storage',
+      extras: 'Cloud backup support & multi-user concurrent licensing'
+    },
+    faqs: [
+      {
+        question: 'Can the ERP be customized for our specific manufacturing workflow?',
+        answer: 'Yes. AADI Software Solutions offers custom modular development to tailor approval steps, custom bill of materials (BOM), and custom report formats.'
+      },
+      {
+        question: 'Is user access restricted by department?',
+        answer: 'Yes, role-based access control allows you to restrict staff strictly to their department (e.g. Sales, Accounts, Storekeeper, HR).'
+      }
+    ],
+    pricingNote: 'Enterprise quote based on user seats, modules required, and deployment model.',
+    whatsappPrefill: 'Assalam o Alaikum, I would like to schedule an ERP demonstration and discuss our business requirements.'
+  },
+  {
+    id: 'prod-inventory-software',
+    name: 'Inventory Management Software',
+    slug: 'inventory-management-software',
+    category: 'Warehouse & Logistics',
+    iconName: 'Warehouse',
+    image: '/src/assets/images/erp_business_dashboard_1793979088994.jpg',
+    shortDescription: 'Multi-warehouse stock tracking, automatic reorder triggers, batch/expiry control, and supplier audit trails.',
+    fullDescription: 'Maintain exact stock visibility across central warehouses, regional depots, and retail outlets. Prevent stockouts, dead capital accumulation, and inventory pilferage with real-time tracking of item movements.',
+    isPublished: true,
+    order: 4,
+    features: [
+      'Real-time stock tracking across multiple warehouses',
+      'Hierarchical product categories, tags & variant matrices',
+      'Automatic minimum stock & critical low-level alerts',
+      'Purchase order creation & vendor receiving verification',
+      'Supplier directory, pricing history & fulfillment lead times',
+      'Inter-warehouse transfer notes & transit verification',
+      'Valuation reports (FIFO, LIFO, Weighted Average Cost)'
+    ],
+    benefits: [
+      'Eliminates capital lockup caused by excess or dead inventory',
+      'Prevents missed customer deliveries due to stock inaccuracies',
+      'Streamlines periodic physical stock audits with barcode scanners',
+      'Provides clear vendor cost trend analytics'
+    ],
+    systemRequirements: {
+      os: 'Windows 10/11 or Web-enabled Tablet',
+      processor: 'Intel Core i3 or equivalent',
+      ram: '4 GB RAM',
+      storage: '2 GB SSD',
+      extras: 'Handheld wireless terminal and barcode scanner support'
+    },
+    faqs: [
+      {
+        question: 'Can we transfer stock between different branches?',
+        answer: 'Yes. The system generates transfer dispatches and requires receiving warehouse confirmation before reconciling stock.'
+      }
+    ],
+    pricingNote: 'Affordable tier based on warehouse count and item catalog size.',
+    whatsappPrefill: 'Assalam o Alaikum, I need details regarding AADI Inventory Management Software.'
+  },
+  {
+    id: 'prod-accounting-software',
+    name: 'Financial Accounting Software',
+    slug: 'accounting-software',
+    category: 'Finance & Taxation',
+    iconName: 'Calculator',
+    image: '/src/assets/images/hero_software_suite_1793979102769.jpg',
+    shortDescription: 'Income, expense records, bank reconciliations, accounts receivable/payable, and automated Profit & Loss statements.',
+    fullDescription: 'Professional double-entry accounting software designed for business owners and accountants. Keep accurate ledgers, monitor daily cash flow, manage invoice aging, and export standard audit-ready financial statements in seconds.',
+    isPublished: true,
+    order: 5,
+    features: [
+      'Daily income and business expense tracking with receipt attachments',
+      'Cash in hand, bank accounts & petty cash management',
+      'Accounts receivable with overdue customer follow-up alerts',
+      'Accounts payable with vendor credit management',
+      'Standard financial reports (Trial Balance, Balance Sheet, Ledger)',
+      'Automated Profit and Loss statements by date range or branch',
+      'Tax calculation, GST / Sales tax reporting & invoice archiving'
+    ],
+    benefits: [
+      'Always know your exact financial health and net profitability',
+      'Speeds up tax filing and auditing with organized ledgers',
+      'Stops delayed customer payments with automatic payment reminder notices',
+      'Secure audit trails tracking every voucher modification'
+    ],
+    systemRequirements: {
+      os: 'Windows 10 / 11 or Web Browser',
+      processor: '2.0 GHz or higher',
+      ram: '4 GB RAM',
+      storage: '1 GB SSD',
+      extras: 'Excel / PDF export capability included'
+    },
+    faqs: [
+      {
+        question: 'Can our external auditor or accountant access reports easily?',
+        answer: 'Yes, all balance sheets, trial balances, and ledgers can be exported directly to Excel, PDF, or accessed via auditor read-only login.'
+      }
+    ],
+    pricingNote: 'Simple setup with no hidden maintenance fees.',
+    whatsappPrefill: 'Assalam o Alaikum, I am interested in AADI Accounting Software. Please share pricing and features.'
+  },
+  {
+    id: 'prod-pharmacy-software',
+    name: 'Pharmacy Management Software',
+    slug: 'pharmacy-management-software',
+    category: 'Healthcare & Retail',
+    iconName: 'Pill',
+    image: '/src/assets/images/pharmacy_inventory_mockup_1793979088899.jpg',
+    shortDescription: 'Medicine batch management, automated expiry tracking alerts, rapid formula search, and distributor billing.',
+    fullDescription: 'Customized specifically for retail chemist shops, pharmaceutical distributors, and hospital pharmacies. Includes medicine generic formula cross-references, batch-wise price lookup, expiry alerts months in advance, and controlled drug sales logs.',
+    isPublished: true,
+    order: 6,
+    features: [
+      'Medicine catalog with formula / generic molecule lookup',
+      'Automated near-expiry and expired stock warning system',
+      'Rapid prescription sales counter billing with shortcut keys',
+      'Distributor purchase records with bonus item adjustments',
+      'Supplier ledger records & payment scheduling',
+      'Narcotics & controlled drug sales audit log',
+      'Daily profit reports with batch margin breakdown'
+    ],
+    benefits: [
+      'Prevents loss from expired drugs through proactive 30/60/90 day alerts',
+      'Fast counter search by brand name, generic salt, or manufacturer',
+      'Correctly accounts for distributor bonus schemes and volume discounts',
+      'Ensures compliance with pharmacy regulatory standards'
+    ],
+    systemRequirements: {
+      os: 'Windows 10 / 11 (64-bit)',
+      processor: 'Dual Core 2.2 GHz or higher',
+      ram: '4 GB RAM',
+      storage: '2 GB SSD',
+      extras: 'Thermal receipt printer and 2D barcode scanner'
+    },
+    faqs: [
+      {
+        question: 'Does the system notify us before medicines expire?',
+        answer: 'Yes. Color-coded alerts highlight items expiring within 30, 60, or 90 days so you can return them to the distributor or prioritize dispensing.'
+      }
+    ],
+    pricingNote: 'Flexible licensing for single medical stores or pharmacy networks.',
+    whatsappPrefill: 'Assalam o Alaikum, I need a quotation and software demo for AADI Pharmacy Management Software.'
+  },
+  {
+    id: 'prod-custom-software',
+    name: 'Custom Business Software',
+    slug: 'custom-business-software',
+    category: 'Bespoke Development',
+    iconName: 'Cpu',
+    image: '/src/assets/images/hero_software_suite_1793979102769.jpg',
+    shortDescription: 'Tailored automation software engineered to match your proprietary operational workflows, legacy databases, and APIs.',
+    fullDescription: 'When off-the-shelf software falls short, AADI Software Solutions builds custom desktop, web, and client-server applications engineered around your exact company rules, approval hierarchies, and reporting habits.',
+    isPublished: true,
+    order: 7,
+    features: [
+      'Custom software architecture & database modeling',
+      'End-to-end business process automation',
+      'Tailored executive dashboards & specialized analytics',
+      'Custom reports formatted to your company standards',
+      'Business-specific approval hierarchies and workflows',
+      'Third-party hardware, payment gateway & API integrations',
+      'Dedicated technical support and ongoing enhancements'
+    ],
+    benefits: [
+      'Zero unnecessary features—100% focused on your business workflow',
+      'Own your operational logic and maintain competitive advantages',
+      'Seamlessly integrates with your existing legacy hardware or machinery',
+      'Dedicated on-site or remote deployment assistance'
+    ],
+    systemRequirements: {
+      os: 'Tailored to your preference: Cloud, On-Premise Windows Server, or Linux',
+      processor: 'Engineered for optimal resource efficiency',
+      ram: 'Configured according to scale',
+      storage: 'Scalable SSD / Cloud storage',
+      extras: 'Full source code ownership options available'
+    },
+    faqs: [
+      {
+        question: 'What is the consultation process for custom software?',
+        answer: 'We conduct a thorough workflow discovery session to document your exact requirements, prepare a functional specification, and deliver milestone-based prototypes.'
+      }
+    ],
+    pricingNote: 'Estimated after initial workflow scope and discovery consultation.',
+    whatsappPrefill: 'Assalam o Alaikum, I would like to discuss custom software development for our business.'
+  }
+];
+
+export const initialPricingPackages: PricingPackage[] = [
+  {
+    id: 'pkg-basic',
+    name: 'Basic Package',
+    targetBusiness: 'Ideal for single-counter retail shops, small cafes, and start-up stores.',
+    priceNote: 'Contact Us for Pricing',
+    popular: false,
+    buttonText: 'Request Basic Quote',
+    features: [
+      'Single Terminal / Counter License',
+      'Complete Billing & Barcode/Receipt Generation',
+      'Core Product Catalog & Daily Sales Reports',
+      'Thermal Printer & Cash Drawer Integration',
+      'Standard Cashier & Admin Access Roles',
+      'Standard Software Installation Assistance',
+      'Email & WhatsApp Technical Support'
+    ]
+  },
+  {
+    id: 'pkg-pro',
+    name: 'Professional Package',
+    targetBusiness: 'Designed for busy restaurants, supermarkets, and growing multi-counter stores.',
+    priceNote: 'Contact Us for Pricing',
+    popular: true,
+    buttonText: 'Request Pro Quote',
+    features: [
+      'Multi-Terminal & Waiter Tablet Support',
+      'Advanced Inventory & Low-Stock Alerts',
+      'Kitchen Order Management (KOT) & Table Layouts',
+      'Customer Credit Accounts & Loyalty Management',
+      'Detailed Shift Closing & Profit Margin Reports',
+      'Multi-User Granular Security Permissions',
+      'Priority Remote Installation & Staff Training',
+      'Direct Phone & Priority WhatsApp Support'
+    ]
+  },
+  {
+    id: 'pkg-enterprise',
+    name: 'Enterprise Package',
+    targetBusiness: 'Engineered for wholesale distributors, multi-branch chains, and large enterprises.',
+    priceNote: 'Contact Us for Pricing',
+    popular: false,
+    buttonText: 'Request Enterprise Quote',
+    features: [
+      'Unlimited Counters & Multi-Branch Support',
+      'Full ERP Integration (Sales, Purchase, Accounts)',
+      'Multi-Warehouse Inventory & Transit Transfers',
+      'Double-Entry Accounting & Financial Statements',
+      'Executive KPI Dashboards & Custom Business Reports',
+      'Automated Database Backup Scheduling',
+      'Custom Workflow Adjustments & API Access',
+      'Dedicated Account Manager & Ongoing Assistance'
+    ]
+  }
+];

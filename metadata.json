@@ -1,0 +1,7 @@
+{
+  "name": "AADI Software Solutions",
+  "description": "Smart Business. Better Tomorrow. Powerful POS, ERP, Restaurant Management, Retail, Inventory, and Accounting Software Solutions for businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
